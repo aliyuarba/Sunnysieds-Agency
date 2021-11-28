@@ -206,6 +206,9 @@
           $(".menu, .togglemenu, .activemenu").toggleClass("active");
         }
       });
+      let galleryHeight = $(".slide").css("width");
+      // alert(galleryHeight);
+      $(".slide").css("height", `${galleryHeight}`);
     </script>
   </body>
 </html>
