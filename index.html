@@ -37,7 +37,7 @@
               <a href="#"><li>About</li></a>
               <a href="#services"><li>Services</li></a>
               <a href="#testimonies"><li>Projects</li></a>
-              <a href="#contact"><li>Contact</li></a>
+              <a href="#contact"><li>CONTACT</li></a>
             </ul>
             <div class="togglemenu">
               <span></span><span></span><span></span>
@@ -81,20 +81,24 @@
           <div class="tile graphic-design">
             <div class="innertile">
               <h3>Graphic Design</h3>
-              <p>
-                Great design makes you memorable. We deliver artwork that
-                underscores your brand message and captures potential clients'
-                attention.
-              </p>
+              <div class="p-container">
+                <p>
+                  Great design makes you memorable. We deliver artwork that
+                  underscores your brand message and captures potential clients'
+                  attention.
+                </p>
+              </div>
             </div>
           </div>
           <div class="tile photography">
             <div class="innertile">
               <h3>Photography</h3>
-              <p>
-                Increase your credibility by getting the most stunning,
-                high-quality photos that improve your business image.
-              </p>
+              <div class="p-container">
+                <p>
+                  Increase your credibility by getting the most stunning,
+                  high-quality photos that improve your business image.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -206,9 +210,6 @@
           $(".menu, .togglemenu, .activemenu").toggleClass("active");
         }
       });
-      let galleryHeight = $(".slide").css("width");
-      // alert(galleryHeight);
-      $(".slide").css("height", `${galleryHeight}`);
     </script>
   </body>
 </html>
