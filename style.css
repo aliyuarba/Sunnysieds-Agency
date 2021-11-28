@@ -45,7 +45,7 @@ main {
 
 header {
   padding: 1rem;
-  height: 100vh;
+  height: 100vmin;
   background-image: url(./images/desktop/image-header.jpg);
   background-position: center;
   background-size: cover;
@@ -76,7 +76,6 @@ nav,
   justify-content: center;
   align-items: center;
 }
-
 .menu a {
   font-size: 1rem;
   height: 35px;
@@ -98,7 +97,7 @@ nav,
   background-color: white;
   color: black;
 }
-
+/* build burger menu with div and span element */
 .togglemenu {
   height: 50px;
   width: 50px;
@@ -137,6 +136,7 @@ nav,
   -ms-transform: translateY(10px);
   -o-transform: translateY(10px);
 }
+/* make animation burgermenu when user click */
 .togglemenu.active span:nth-child(1) {
   transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
@@ -159,6 +159,7 @@ nav,
   -o-transform: rotate(315deg);
 }
 .activemenu {
+  /* make black filter overlay when open menu */
   display: none;
   position: fixed;
   width: 100%;
@@ -169,12 +170,17 @@ nav,
   z-index: 2;
 }
 
-header h1,
-#arrow {
+header h1 {
+  /* "we are creative" text */
+  width: 85%;
   text-align: center;
   color: var(--White);
   font-family: "Barlow", sans-serif;
   font-size: 5rem;
+}
+/* positioning header text and down-arrow */
+header h1,
+#arrow {
   position: absolute;
   top: 35%;
   left: 50%;
@@ -184,14 +190,11 @@ header h1,
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
 }
-header h1 {
-  width: 85%;
-}
 #arrow {
+  /* down-arrow */
   top: 55%;
   height: 15%;
 }
-
 /* services */
 #services {
   width: 100%;
@@ -203,7 +206,7 @@ header h1 {
 }
 .tile {
   width: 100%;
-  height: 95vmin;
+  height: 100vmin;
   position: relative;
   background-position: center;
   background-repeat: no-repeat;
@@ -211,41 +214,49 @@ header h1 {
   display: flex;
   align-items: center;
 }
+.innertile {
+  /* text container */
+  margin: 10%;
+}
 .tile h3 {
-  font-size: 3.25vmax;
+  /* subtitle for each tile */
+  font-size: 3.45vmax;
 }
 .tile p {
-  font-size: 1.8vmax;
+  /* paragraf */
+  font-size: 2.35vmax;
   margin: 3vmax 0;
 }
 .tile h4 {
-  font-size: 2vmax;
+  /* "learn more" text */
+  font-size: 2.12vmax;
 }
 
-.innertile {
-  margin: 10%;
-}
-
+/* style for last two .tile */
 .graphic-design,
 .photography {
   text-align: center;
   flex-direction: column;
   justify-content: flex-end;
 }
-.graphic-design p,
-.photography p {
-  margin: 0;
-}
 .graphic-design .innertile,
 .photography .innertile {
-  height: 35%;
-  margin-bottom: 5%;
+  height: 40%;
+  margin-bottom: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .graphic-design h3,
 .photography h3 {
   margin: 5% 0;
 }
+.graphic-design p,
+.photography p {
+  margin: 0;
+}
 
+/* add background to .tile */
 .egg {
   background-image: url(./images/desktop/image-transform.jpg);
 }
@@ -254,9 +265,11 @@ header h1 {
 }
 .graphic-design {
   background-image: url(./images/desktop/image-graphic-design.jpg);
+  color: var(--graphicdesigntext);
 }
 .photography {
   background-image: url(./images/desktop/image-photography.jpg);
+  color: var(--photographytext);
 }
 
 /* testimonial */
@@ -269,19 +282,12 @@ header h1 {
   align-items: center;
 }
 .testimonies h2 {
+  /* testimonies subtitle text */
   font-size: 3.5vmax;
 }
-.testimonies p {
-  font-size: 1.6vmax;
-}
-.testimonies h4 {
-  font-size: 2.1vmax;
-  margin-bottom: 0.1rem;
-}
-.testimonies h6 {
-  font-size: 1.45vmax;
-}
+
 .testi-container {
+  /* container for clients card */
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -289,9 +295,16 @@ header h1 {
   padding: 6rem;
 }
 .client {
+  /* clients card */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   text-align: center;
+  padding: 1rem;
 }
 .client img {
+  /* clients avatars */
   margin-bottom: 3rem;
   width: 20%;
   border-radius: 50%;
@@ -300,8 +313,23 @@ header h1 {
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
 }
+.testimonies p {
+  /* paragraf */
+  font-size: 2.25vmax;
+}
 .profile {
+  /* container for client name and position */
   margin-top: 3rem;
+}
+.testimonies h4 {
+  /* clients name */
+  font-size: 3vmax;
+  margin-bottom: 0.1rem;
+}
+.testimonies h6 {
+  /* clients position */
+  font-size: 2vmax;
+  color: var(--Verydarkdesaturatedblue);
 }
 
 /* gallery */
@@ -311,7 +339,8 @@ header h1 {
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .slide {
-  height: 40vh;
+  width: 100%;
+  aspect-ratio: 1/1;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -386,6 +415,9 @@ footer a:hover {
   nav {
     padding: 0rem;
   }
+  header{
+    height: 100vh;
+  }
   header h1 {
     margin-top: 0;
     font-size: 3rem;
@@ -400,8 +432,9 @@ footer a:hover {
     padding: 2rem 0 0 0;
   }
   .testi-container {
+    grid-template-columns: 1fr 1fr;
     padding: 2rem 3rem;
-    grid-gap: 1rem;
+    grid-gap: 2rem 1rem;
   }
   .client img {
     margin-bottom: 1rem;
@@ -486,19 +519,16 @@ footer a:hover {
   .photography {
     height: 90vmax;
   }
-
   .testi-container {
     grid-template-columns: 1fr;
     padding: 2.5rem 1rem;
+    grid-gap: 1rem;
   }
   .client {
-    margin: 0 0.5rem 3rem 0.5rem;
+    margin: 0;
   }
   .gallery {
     grid-template-columns: 1fr 1fr;
-  }
-  .slide {
-    height: 25vh;
   }
   footer ul {
     flex-direction: column;
