@@ -1,9 +1,11 @@
 :root {
+
   --Softred: hsl(7, 99%, 70%);
   --Yellow: hsl(51, 100%, 49%);
   --graphicdesigntext: hsl(167, 40%, 24%);
   --photographytext: hsl(198, 62%, 26%);
   --footer: hsl(168, 34%, 41%);
+
   --Verydarkdesaturatedblue: hsl(212, 27%, 19%);
   --Verydarkgrayishblue: hsl(213, 9%, 39%);
   --Darkgrayishblue: hsl(232, 10%, 55%);
@@ -18,8 +20,7 @@ html {
 * {
   padding: 0;
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 a {
@@ -33,16 +34,9 @@ ul {
 }
 
 body {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   font-family: 'Fraunces', serif;
 }
 
@@ -62,12 +56,8 @@ header {
 }
 
 nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   padding: 0 1rem;
   color: var(--White);
   position: relative;
@@ -85,83 +75,56 @@ nav,
 .menu,
 .menu ul,
 .menu ul a {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
 .menu a {
   font-size: 1rem;
   height: 35px;
   padding: 0 1.2rem;
   margin: 0 0.1rem;
-  -webkit-transition: 200ms;
   transition: 200ms;
   border-radius: 40px;
 }
-
 .menu a:nth-child(4),
 .menu a:hover {
   background-color: white;
   color: black;
 }
-
 /* build burger menu with div and span element */
 .togglemenu {
   height: 50px;
   width: 50px;
   position: relative;
   display: none;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: flex-end;
+  align-items: center;
 }
-
 .togglemenu span {
   position: absolute;
   width: 39px;
   height: 3px;
   background-color: var(--White);
   border-radius: 10px;
-  -webkit-transition: 200ms;
   transition: 200ms;
 }
-
 .togglemenu span:nth-child(1) {
-  -webkit-transform: translateY(-10px);
-          transform: translateY(-10px);
+  transform: translateY(-10px);
 }
-
 .togglemenu span:nth-child(3) {
-  -webkit-transform: translateY(10px);
-          transform: translateY(10px);
+  transform: translateY(10px);
 }
-
 /* make animation burgermenu when user click */
 .togglemenu.active span:nth-child(1) {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
-
 .togglemenu.active span:nth-child(2) {
-  -webkit-transform: translateX(200%);
-          transform: translateX(200%);
+  transform: translateX(200%);
 }
-
 .togglemenu.active span:nth-child(3) {
-  -webkit-transform: rotate(315deg);
-          transform: rotate(315deg);
+  transform: rotate(315deg);
 }
-
 .activemenu {
   /* make black filter overlay when open menu */
   display: none;
@@ -182,36 +145,28 @@ header h1 {
   font-size: 5rem;
   letter-spacing: -4px;
 }
-
 /* positioning header text and down-arrow */
 header h1,
 #arrow {
   position: absolute;
   top: 40%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
-
 #arrow {
   /* down-arrow */
   top: 55%;
   height: 15%;
 }
-
 /* services */
 #services {
   width: 100%;
 }
-
 .tile-container {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   position: relative;
 }
-
 .tile {
   width: 100%;
   height: 100vmin;
@@ -219,31 +174,23 @@ header h1,
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
-
 .innertile {
   /* text container */
   margin: 10%;
 }
-
 .tile h3 {
   /* subtitle for each tile */
   font-size: 1.2rem;
 }
-
 .tile p {
   /* paragraf */
   font-size: 1rem;
   margin: 1rem 0;
   font-family: "Barlow", sans-serif;
 }
-
 .tile h4 {
   /* "learn more" text */
   font-size: .712rem;
@@ -253,50 +200,28 @@ header h1,
 .graphic-design,
 .photography {
   text-align: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+  flex-direction: column;
+  justify-content: flex-end;
 }
-
 .graphic-design .innertile,
 .photography .innertile {
   height: 40%;
   margin-bottom: 10%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  justify-content: center;
 }
-
 .graphic-design h3,
 .photography h3 {
   height: 40%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
-
 .graphic-design .p-container,
 .photography .p-container {
   height: 60%;
 }
-
 .graphic-design p,
 .photography p {
   margin: 0;
@@ -306,16 +231,13 @@ header h1,
 .egg {
   background-image: url(./images/desktop/image-transform.jpg);
 }
-
 .glass {
   background-image: url(./images/desktop/image-stand-out.jpg);
 }
-
 .graphic-design {
   background-image: url(./images/desktop/image-graphic-design.jpg);
   color: var(--graphicdesigntext);
 }
-
 .photography {
   background-image: url(./images/desktop/image-photography.jpg);
   color: var(--photographytext);
@@ -325,21 +247,11 @@ header h1,
 .testimonies {
   padding: 6rem 0 0 0;
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
 .testimonies h2 {
   /* testimonies subtitle text */
   font-size: 3.5vmax;
@@ -348,51 +260,35 @@ header h1,
 .testi-container {
   /* container for clients card */
   width: 100%;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 2.5rem;
   padding: 6rem;
 }
-
 .client {
   /* clients card */
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   text-align: center;
   padding: 1rem 0;
 }
-
 .client img {
   /* clients avatars */
   width: 30%;
   border-radius: 50%;
 }
-
 .testimonies p {
   /* paragraf */
   font-size: 1rem;
   margin: 1.5rem 0;
 }
-
 .testimonies h4 {
   /* clients name */
   font-size: 1.34rem;
   margin-bottom: 0.1rem;
 }
-
 .testimonies h6 {
   /* clients position */
   font-size: .97rem;
@@ -402,31 +298,24 @@ header h1,
 /* gallery */
 .gallery {
   width: 100%;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-
 .slide {
   height: 25vw;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
 }
-
 .slide:nth-child(3) {
   background-image: url(./images/desktop/image-gallery-cone.jpg);
 }
-
 .slide:nth-child(1) {
   background-image: url(./images/desktop/image-gallery-milkbottles.jpg);
 }
-
 .slide:nth-child(2) {
   background-image: url(./images/desktop/image-gallery-orange.jpg);
 }
-
 .slide:nth-child(4) {
   background-image: url(./images/desktop/image-gallery-sugarcubes.jpg);
 }
@@ -440,47 +329,33 @@ footer {
   position: relative;
   color: var(--graphicdesigntext);
 }
-
 footer svg {
   fill: var(--graphicdesigntext);
 }
 
 footer ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   list-style: none;
   margin: 2rem 0 5rem 0;
 }
-
 footer li {
   padding: 1rem;
 }
-
 footer a:hover {
   color: white;
 }
-
 .contact {
   margin: 0 0 4rem 0;
 }
-
 .contact img {
   width: 25px;
   margin: 0 0.5rem;
 }
-
 .contact img:hover {
-  -webkit-filter: brightness(0) invert(100%);
-          filter: brightness(0) invert(100%);
+  filter: brightness(0) invert(100%);
 }
-
 .attribution {
   padding: 0 1rem;
   width: 100%;
@@ -489,15 +364,14 @@ footer a:hover {
   left: 50%;
   font-size: 14px;
   font-weight: lighter;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 @media (max-width: 768px) {
   nav {
     padding: 0rem;
   }
-  header {
+  header{
     height: 100vh;
   }
   header h1 {
@@ -514,8 +388,7 @@ footer a:hover {
     padding: 2rem 0 0 0;
   }
   .testi-container {
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     padding: 2rem 3rem;
     grid-gap: 2rem 1rem;
   }
@@ -535,16 +408,9 @@ footer a:hover {
     background-image: url(./images/mobile/image-header.jpg);
   }
   .menu ul {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-direction: column;
+    justify-content: center;
     position: absolute;
     right: 0;
     top: 98px;
@@ -554,7 +420,6 @@ footer a:hover {
     height: 0;
     z-index: 3;
     overflow: hidden;
-    -webkit-transition: 200ms;
     transition: 200ms;
   }
   .menu.active ul {
@@ -568,8 +433,6 @@ footer a:hover {
     background-color: yellow;
   }
   .togglemenu {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     z-index: 3;
   }
@@ -588,7 +451,6 @@ footer a:hover {
     bottom: -52px;
     right: 0;
     z-index: 3;
-    -webkit-transition: 100ms;
     transition: 100ms;
   }
   .menu.active::after {
@@ -596,24 +458,17 @@ footer a:hover {
     border-bottom: 15px solid white;
   }
   .tile-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
   .tile-container:nth-child(1) {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+    flex-direction: column-reverse;
   }
   .graphic-design,
   .photography {
     height: 75vmax;
   }
   .testi-container {
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
+    grid-template-columns: 1fr;
     padding: 2.5rem 1rem;
     grid-gap: 1rem;
   }
@@ -621,17 +476,12 @@ footer a:hover {
     margin: 1.5rem 0;
   }
   .gallery {
-    -ms-grid-columns: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
   .slide {
     height: 50vw;
   }
   footer ul {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
 }
-/*# sourceMappingURL=style.css.map */
