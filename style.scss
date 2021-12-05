@@ -87,10 +87,13 @@ nav,
   transition: 200ms;
   border-radius: 40px;
 }
-.menu a:nth-child(4),
-.menu a:hover {
-  background-color: white;
+.menu a:nth-child(4){
+  background-color: #fff;
   color: black;
+}
+.menu a:nth-child(4):hover {
+  background-color: rgb(118, 223, 255);
+  color: white;
 }
 /* build burger menu with div and span element */
 .togglemenu {
@@ -188,8 +191,10 @@ header h1,
 .tile p {
   /* paragraf */
   font-size: 1rem;
+  font-weight: lighter;
   margin: 1rem 0;
   font-family: "Barlow", sans-serif;
+  color: var(--Grayishblue);
 }
 .tile h4 {
   /* "learn more" text */
@@ -222,9 +227,14 @@ header h1,
 .photography .p-container {
   height: 60%;
 }
-.graphic-design p,
+.graphic-design p{
+  margin: 0;
+  color: var(--graphicdesigntext);
+}
+
 .photography p {
   margin: 0;
+  color: var(--photographytext);
 }
 
 /* add background to .tile */
@@ -255,6 +265,7 @@ header h1,
 .testimonies h2 {
   /* testimonies subtitle text */
   font-size: 3.5vmax;
+  color: var(--Grayishblue);
 }
 
 .testi-container {
@@ -283,16 +294,19 @@ header h1,
   /* paragraf */
   font-size: 1rem;
   margin: 1.5rem 0;
+  color: var(--Verydarkgrayishblue);
 }
 .testimonies h4 {
   /* clients name */
   font-size: 1.34rem;
-  margin-bottom: 0.1rem;
+  margin: 1rem 0 .5rem 0;
+  color: var(--Verydarkdesaturatedblue);
+
 }
 .testimonies h6 {
   /* clients position */
   font-size: .97rem;
-  color: var(--Verydarkdesaturatedblue);
+  color: var(--Grayishblue);
 }
 
 /* gallery */
@@ -430,7 +444,8 @@ footer a:hover {
     margin: 0.5rem 0;
   }
   .menu ul a:nth-child(4) {
-    background-color: yellow;
+    background-color: rgb(235, 211, 0);
+    padding: 1.37rem 3rem;
   }
   .togglemenu {
     display: flex;
